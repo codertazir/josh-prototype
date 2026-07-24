@@ -27,35 +27,35 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-border: var(--border);
   --color-ring: var(--ring);
-  --color-cream: var(--cream);
-  --color-espresso: var(--espresso);
-  --color-terracotta: var(--terracotta);
-  --color-mustard: var(--mustard);
+  --color-accent-blue: var(--accent-blue);
+  --color-ink: var(--ink);
+
+  --animate-fade-in: fade-in 0.7s ease-out both;
+  --animate-fade-up: fade-up 0.8s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
 }
 
 :root {
   --radius: 0.75rem;
 
-  /* Warm breakfast palette */
-  --cream: oklch(0.968 0.018 85);
-  --espresso: oklch(0.22 0.03 45);
-  --terracotta: oklch(0.62 0.15 40);
-  --mustard: oklch(0.78 0.14 75);
+  /* White + Josh blue */
+  --accent-blue: oklch(0.74 0.13 230);
+  --ink: oklch(0.18 0.02 240);
 
-  --background: oklch(0.968 0.018 85);
-  --foreground: oklch(0.22 0.03 45);
-  --card: oklch(0.985 0.01 85);
-  --card-foreground: oklch(0.22 0.03 45);
-  --primary: oklch(0.62 0.15 40);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.93 0.025 80);
-  --secondary-foreground: oklch(0.22 0.03 45);
-  --muted: oklch(0.93 0.02 80);
-  --muted-foreground: oklch(0.45 0.025 50);
-  --accent: oklch(0.78 0.14 75);
-  --accent-foreground: oklch(0.22 0.03 45);
-  --border: oklch(0.88 0.02 75);
-  --ring: oklch(0.62 0.15 40);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.18 0.02 240);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.02 240);
+  --primary: oklch(0.74 0.13 230);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.97 0.005 240);
+  --secondary-foreground: oklch(0.18 0.02 240);
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.5 0.02 240);
+  --accent: oklch(0.74 0.13 230);
+  --accent-foreground: oklch(1 0 0);
+  --border: oklch(0.92 0.008 240);
+  --ring: oklch(0.74 0.13 230);
 }
 
 @layer base {
@@ -74,10 +74,23 @@
   }
 }
 
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
 @utility grain-bg {
   background-image:
-    radial-gradient(oklch(0.62 0.15 40 / 0.06) 1px, transparent 1px),
-    radial-gradient(oklch(0.22 0.03 45 / 0.04) 1px, transparent 1px);
+    radial-gradient(oklch(0.74 0.13 230 / 0.05) 1px, transparent 1px),
+    radial-gradient(oklch(0.18 0.02 240 / 0.03) 1px, transparent 1px);
   background-size: 24px 24px, 40px 40px;
   background-position: 0 0, 12px 20px;
 }
