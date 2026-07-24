@@ -183,7 +183,7 @@ function Index() {
       </section>
 
       {/* Menu */}
-      <section id="menu" className="grain-bg bg-white py-24 md:py-32">
+      <section id="menu" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">The menu</p>
