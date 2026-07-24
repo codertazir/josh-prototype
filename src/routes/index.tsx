@@ -161,7 +161,7 @@ function Index() {
       </section>
 
       {/* Signature dishes gallery */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="bg-accent-blue/[0.04] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
