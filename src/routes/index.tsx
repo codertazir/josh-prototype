@@ -237,76 +237,64 @@ function Index() {
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">Visit</p>
             <h2 className="mt-4 font-display text-4xl md:text-6xl">Come sit with us.</h2>
 
-            <dl className="mt-12 space-y-8">
-              <div>
-                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Address</dt>
-                <dd className="mt-2 text-lg">
-                  Al Shati Street I, Al Shati, Fanateer<br />
-                  Al Jubail, Saudi Arabia
-                </dd>
-                <a
-                  href="https://www.google.com/maps/place/Josh+Fanateer+I+%D8%AC%D9%88%D8%B4+%D8%A7%D9%84%D9%81%D9%86%D8%A7%D8%AA%D9%8A%D8%B1"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-3 inline-block text-sm text-accent-blue underline underline-offset-4 hover:opacity-80"
-                >
-                  Open in Google Maps →
-                </a>
-              </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              <a
+                href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+              >
+                <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
+                <div className="mt-2 font-display text-xl">Fanateer</div>
+                <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  الشاطئ، الصناعية<br />
+                  Al Shati street I, Al Jubail
+                </div>
+                <div className="mt-4 text-sm">
+                  <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 1 AM<br />
+                  <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 1 AM
+                </div>
+                <div className="mt-4 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+              </a>
 
-              <div>
-                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Hours</dt>
-                <dd className="mt-2 space-y-1 text-base">
-                  <div>Sun – Thu <span className="mx-2 text-accent-blue">•</span> 5 AM – 1 AM</div>
-                  <div>Fri – Sat <span className="mx-2 text-accent-blue">•</span> 6 AM – 1 AM</div>
-                </dd>
-              </div>
+              <a
+                href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
+                target="_blank"
+                rel="noreferrer"
+                className="group rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+              >
+                <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
+                <div className="mt-2 font-display text-xl">Al Jubail</div>
+                <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  King Faisal Ibn Abd Al Aziz<br />
+                  King Fahd Industrial Port, Al Jubail 35518
+                </div>
+                <div className="mt-4 text-sm">
+                  <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 12 AM<br />
+                  <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 12 AM
+                </div>
+                <div className="mt-4 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+              </a>
+            </div>
 
-              <div>
-                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Our branches</dt>
-                <dd className="mt-3 grid gap-3 sm:grid-cols-2">
+            <div className="mt-12">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground">Contact</p>
+              <div className="mt-3 space-y-1 text-base">
+                <div>
+                  <a href="tel:+966598678697" className="hover:text-accent-blue">+966 59 867 8697</a>
+                </div>
+                <div>
                   <a
-                    href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
+                    href="https://www.instagram.com/josh_ksa"
                     target="_blank"
                     rel="noreferrer"
-                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                    className="hover:text-accent-blue"
                   >
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
-                    <div className="mt-1 font-display text-lg">Fanateer</div>
-                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+                    @josh_ksa
                   </a>
-                  <a
-                    href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
-                  >
-                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
-                    <div className="mt-1 font-display text-lg">Al Jubail</div>
-                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
-                  </a>
-                </dd>
+                </div>
               </div>
-
-              <div>
-                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Contact</dt>
-                <dd className="mt-2 space-y-1 text-base">
-                  <div>
-                    <a href="tel:+966598678697" className="hover:text-accent-blue">+966 59 867 8697</a>
-                  </div>
-                  <div>
-                    <a
-                      href="https://www.instagram.com/josh_ksa"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:text-accent-blue"
-                    >
-                      @josh_ksa
-                    </a>
-                  </div>
-                </dd>
-              </div>
-            </dl>
+            </div>
           </div>
         </div>
       </section>
