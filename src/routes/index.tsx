@@ -256,9 +256,35 @@ function Index() {
 
               <div>
                 <dt className="text-xs uppercase tracking-widest text-muted-foreground">Hours</dt>
-                <dd className="mt-2 grid grid-cols-2 gap-x-8 gap-y-1 text-base">
-                  <span>Sun – Thu</span><span>5 AM – 1 AM</span>
-                  <span>Fri – Sat</span><span>6 AM – 1 AM</span>
+                <dd className="mt-2 space-y-1 text-base">
+                  <div>Sun – Thu <span className="mx-2 text-accent-blue">•</span> 5 AM – 1 AM</div>
+                  <div>Fri – Sat <span className="mx-2 text-accent-blue">•</span> 6 AM – 1 AM</div>
+                </dd>
+              </div>
+
+              <div>
+                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Our branches</dt>
+                <dd className="mt-3 grid gap-3 sm:grid-cols-2">
+                  <a
+                    href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                  >
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
+                    <div className="mt-1 font-display text-lg">Fanateer</div>
+                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                  >
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
+                    <div className="mt-1 font-display text-lg">Al Jubail</div>
+                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+                  </a>
                 </dd>
               </div>
 
