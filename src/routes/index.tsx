@@ -99,11 +99,11 @@ function Index() {
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 md:px-10 md:pb-28">
           {/* Blurred glass panel behind text for legibility */}
           <div className="max-w-3xl animate-fade-up rounded-3xl border border-white/50 bg-white/55 p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.2)] backdrop-blur-2xl md:p-12">
-            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-accent-blue">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-ink/80">
               Al Jubail · Since sunrise
             </p>
             <h1 className="font-display text-5xl font-medium leading-[0.95] text-foreground md:text-7xl">
-              Breakfast, <em className="italic text-accent-blue">slowly</em> — the way mornings were meant to taste.
+              Breakfast, <em className="italic text-ink">slowly</em> — the way mornings were meant to taste.
             </h1>
             <p className="mt-6 max-w-xl text-base text-foreground/70 md:text-lg">
               Josh — جوش الفناتير — a small breakfast shop pouring hot coffee and stacking pancakes from 5 in the morning until 1 at night.
@@ -137,9 +137,8 @@ function Index() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7 md:text-lg">
             <p>
-              Josh started as a tiny counter in Fanateer with one espresso machine, a hot griddle, and a
-              simple idea — make the first meal of the day worth waking up for. Years and a thousand
-              breakfasts later, the idea hasn't changed.
+              Josh is a neighborhood breakfast shop on Al Shati Street in Fanateer, built around
+              one simple idea — make the first meal of the day worth waking up for.
             </p>
             <p>
               Everything is made to order. Pancakes hit the pan when you sit down. Omelettes are folded
@@ -162,7 +161,7 @@ function Index() {
       </section>
 
       {/* Signature dishes gallery */}
-      <section className="bg-white py-24 md:py-32">
+      <section className="bg-accent-blue/[0.04] py-24 md:py-32">
         <div className="mx-auto max-w-7xl px-6 md:px-10">
           <div className="flex flex-wrap items-end justify-between gap-6">
             <div>
@@ -184,7 +183,7 @@ function Index() {
       </section>
 
       {/* Menu */}
-      <section id="menu" className="grain-bg bg-white py-24 md:py-32">
+      <section id="menu" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">The menu</p>
@@ -222,7 +221,7 @@ function Index() {
       </section>
 
       {/* Visit */}
-      <section id="visit" className="relative overflow-hidden bg-white text-foreground">
+      <section id="visit" className="relative overflow-hidden bg-accent-blue/[0.04] text-foreground">
         <div className="mx-auto grid max-w-7xl gap-0 md:grid-cols-2">
           <div className="relative min-h-[420px]">
             <img
@@ -257,9 +256,35 @@ function Index() {
 
               <div>
                 <dt className="text-xs uppercase tracking-widest text-muted-foreground">Hours</dt>
-                <dd className="mt-2 grid grid-cols-2 gap-x-8 gap-y-1 text-base">
-                  <span>Sun – Thu</span><span>5 AM – 1 AM</span>
-                  <span>Fri – Sat</span><span>6 AM – 1 AM</span>
+                <dd className="mt-2 space-y-1 text-base">
+                  <div>Sun – Thu <span className="mx-2 text-accent-blue">•</span> 5 AM – 1 AM</div>
+                  <div>Fri – Sat <span className="mx-2 text-accent-blue">•</span> 6 AM – 1 AM</div>
+                </dd>
+              </div>
+
+              <div>
+                <dt className="text-xs uppercase tracking-widest text-muted-foreground">Our branches</dt>
+                <dd className="mt-3 grid gap-3 sm:grid-cols-2">
+                  <a
+                    href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                  >
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
+                    <div className="mt-1 font-display text-lg">Fanateer</div>
+                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group rounded-2xl border border-border bg-white/70 p-4 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                  >
+                    <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
+                    <div className="mt-1 font-display text-lg">Al Jubail</div>
+                    <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
+                  </a>
                 </dd>
               </div>
 
@@ -289,7 +314,7 @@ function Index() {
       {/* Footer */}
       <footer className="bg-white pb-10 pt-4 text-muted-foreground">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-border px-6 pt-8 text-xs md:px-10">
-          <img src={joshLogo.url} alt="Josh" className="h-7 w-auto" />
+          <img src={joshLogo.url} alt="Josh" className="h-16 w-auto md:h-20" />
           <span>© {new Date().getFullYear()} Josh, The Breakfast Shop. All mornings reserved.</span>
         </div>
       </footer>
