@@ -137,9 +137,8 @@ function Index() {
           </div>
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7 md:text-lg">
             <p>
-              Josh started as a tiny counter in Fanateer with one espresso machine, a hot griddle, and a
-              simple idea — make the first meal of the day worth waking up for. Years and a thousand
-              breakfasts later, the idea hasn't changed.
+              Josh is a neighborhood breakfast shop on Al Shati Street in Fanateer, built around
+              one simple idea — make the first meal of the day worth waking up for.
             </p>
             <p>
               Everything is made to order. Pancakes hit the pan when you sit down. Omelettes are folded
