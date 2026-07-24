@@ -221,7 +221,7 @@ function Index() {
       </section>
 
       {/* Visit */}
-      <section id="visit" className="relative overflow-hidden bg-white text-foreground">
+      <section id="visit" className="relative overflow-hidden bg-accent-blue/[0.04] text-foreground">
         <div className="mx-auto grid max-w-7xl gap-0 md:grid-cols-2">
           <div className="relative min-h-[420px]">
             <img
