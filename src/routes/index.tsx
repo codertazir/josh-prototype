@@ -99,11 +99,11 @@ function Index() {
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-20 md:px-10 md:pb-28">
           {/* Blurred glass panel behind text for legibility */}
           <div className="max-w-3xl animate-fade-up rounded-3xl border border-white/50 bg-white/55 p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.2)] backdrop-blur-2xl md:p-12">
-            <p className="mb-4 text-xs uppercase tracking-[0.35em] text-accent-blue">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-ink/80">
               Al Jubail · Since sunrise
             </p>
             <h1 className="font-display text-5xl font-medium leading-[0.95] text-foreground md:text-7xl">
-              Breakfast, <em className="italic text-accent-blue">slowly</em> — the way mornings were meant to taste.
+              Breakfast, <em className="italic text-ink">slowly</em> — the way mornings were meant to taste.
             </h1>
             <p className="mt-6 max-w-xl text-base text-foreground/70 md:text-lg">
               Josh — جوش الفناتير — a small breakfast shop pouring hot coffee and stacking pancakes from 5 in the morning until 1 at night.
