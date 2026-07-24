@@ -314,7 +314,7 @@ function Index() {
       {/* Footer */}
       <footer className="bg-white pb-10 pt-4 text-muted-foreground">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-border px-6 pt-8 text-xs md:px-10">
-          <img src={joshLogo.url} alt="Josh" className="h-7 w-auto" />
+          <img src={joshLogo.url} alt="Josh" className="h-16 w-auto md:h-20" />
           <span>© {new Date().getFullYear()} Josh, The Breakfast Shop. All mornings reserved.</span>
         </div>
       </footer>
