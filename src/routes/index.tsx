@@ -8,6 +8,8 @@ import croissantImg from "@/assets/croissant.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
 import { menu } from "@/data/menu";
+import { MenuItemCard } from "@/components/MenuItemCard";
+
 
 
 export const Route = createFileRoute("/")({
