@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { menu } from "@/data/menu";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
+import { MenuItemCard } from "@/components/MenuItemCard";
+
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
