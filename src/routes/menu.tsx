@@ -51,12 +51,13 @@ function MenuPage() {
               </Link>
             </li>
           </ul>
-          <a
-            href="tel:+966598678697"
+          <Link
+            to="/"
             className="rounded-full bg-accent-blue px-4 py-2 text-xs font-medium uppercase tracking-widest text-white shadow-sm transition hover:opacity-90 hover:shadow-md"
           >
-            Call
-          </a>
+            ← Home
+          </Link>
+
         </nav>
       </header>
 
