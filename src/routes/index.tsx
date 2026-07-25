@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Star } from "lucide-react";
 import heroImg from "@/assets/hero-breakfast.jpg";
 import pancakesImg from "@/assets/pancakes.jpg";
 import omeletteImg from "@/assets/omelette.jpg";
@@ -6,6 +7,8 @@ import burgerImg from "@/assets/burger.jpg";
 import croissantImg from "@/assets/croissant.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
+import { menu } from "@/data/menu";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
