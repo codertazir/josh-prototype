@@ -157,43 +157,56 @@ function Index() {
         </div>
       </section>
 
-      {/* Menu */}
+      {/* Menu preview */}
       <section id="menu" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">The menu</p>
             <h2 className="mt-4 font-display text-5xl md:text-7xl">All day, every day.</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-              Prices in Saudi Riyal. Menu rotates with the seasons and the mood of the kitchen.
+              Prices in Saudi Riyal · VAT included.
             </p>
           </div>
 
-          <div className="grid gap-16 md:grid-cols-2 md:gap-x-16 md:gap-y-20">
-            {menu.map((sec) => (
-              <div key={sec.section}>
-                <h3 className="mb-8 flex items-baseline gap-4 font-display text-2xl">
-                  <span className="text-accent-blue">—</span>
-                  {sec.section}
-                </h3>
-                <ul className="space-y-6">
-                  {sec.items.map((it) => (
-                    <li key={it.name} className="flex items-baseline gap-4 transition-transform hover:translate-x-1">
-                      <div className="flex-1">
+          <div className="relative">
+            <div className="grid gap-12 md:grid-cols-2 md:gap-x-16">
+              {menu.slice(0, 2).map((sec) => (
+                <div key={sec.section}>
+                  <h3 className="mb-8 flex items-baseline gap-4 font-display text-2xl">
+                    <span className="text-accent-blue">—</span>
+                    {sec.section}
+                  </h3>
+                  <ul className="space-y-6">
+                    {sec.items.map((it) => (
+                      <li key={it.name} className="transition-transform hover:translate-x-1">
                         <div className="flex items-baseline gap-3">
                           <span className="font-display text-lg font-medium">{it.name}</span>
                           <span className="flex-1 border-b border-dashed border-border" />
                           <span className="font-display text-lg text-accent-blue">{it.price}</span>
                         </div>
                         <p className="mt-1 text-sm text-muted-foreground">{it.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Fade + blur toward the bottom */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/85 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_35%,transparent)]" />
+
+            <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
+              <Link
+                to="/menu"
+                className="rounded-full bg-accent-blue px-7 py-3.5 text-sm font-medium text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                View full menu
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Visit */}
       <section id="visit" className="relative overflow-hidden bg-accent-blue/[0.04] text-foreground">
