@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Star } from "lucide-react";
 import heroImg from "@/assets/hero-breakfast.jpg";
 import pancakesImg from "@/assets/pancakes.jpg";
 import omeletteImg from "@/assets/omelette.jpg";
@@ -6,6 +7,8 @@ import burgerImg from "@/assets/burger.jpg";
 import croissantImg from "@/assets/croissant.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
+import { menu } from "@/data/menu";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,40 +31,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const menu = [
-  {
-    section: "Pancakes & Sweet",
-    items: [
-      { name: "Classic Buttermilk Stack", desc: "Fluffy pancakes, butter, warm maple syrup.", price: "24" },
-      { name: "Lotus Dream", desc: "Pancakes drenched in Lotus caramel and crushed biscuit.", price: "31" },
-      { name: "Berry Cloud", desc: "Fresh berries, mascarpone, powdered sugar.", price: "29" },
-    ],
-  },
-  {
-    section: "Omelettes & Eggs",
-    items: [
-      { name: "Cheesy Omelette", desc: "Three-cheese pull, herbs, sourdough toast.", price: "29" },
-      { name: "Shakshuka Fanateer", desc: "Eggs poached in spiced tomato, feta, bread.", price: "27" },
-      { name: "Dynamite Chicken", desc: "Crispy chicken, eggs, spicy Josh sauce.", price: "31" },
-    ],
-  },
-  {
-    section: "Loaf, Buns & Burgers",
-    items: [
-      { name: "Golden Bun", desc: "Toasted brioche, cream cheese, honey drizzle.", price: "19" },
-      { name: "Chicken Burger", desc: "Buttermilk fried chicken, pickles, brioche.", price: "17" },
-      { name: "Le Croissant", desc: "Butter croissant, choice of jam or Nutella.", price: "15" },
-    ],
-  },
-  {
-    section: "From the Bar",
-    items: [
-      { name: "Spanish Latte", desc: "Espresso, steamed milk, condensed sweetness.", price: "16" },
-      { name: "V60 Pour Over", desc: "Rotating single origin, bright and clean.", price: "18" },
-      { name: "Karak", desc: "Spiced milk tea, brewed slow.", price: "10" },
-    ],
-  },
-];
+
 
 function Index() {
   return (
@@ -74,7 +44,7 @@ function Index() {
           </a>
           <ul className="hidden gap-8 text-sm text-foreground/80 md:flex">
             <li><a href="#story" className="transition-colors hover:text-accent-blue">Story</a></li>
-            <li><a href="#menu" className="transition-colors hover:text-accent-blue">Menu</a></li>
+            <li><Link to="/menu" className="transition-colors hover:text-accent-blue">Menu</Link></li>
             <li><a href="#visit" className="transition-colors hover:text-accent-blue">Visit</a></li>
           </ul>
           <a
@@ -147,7 +117,12 @@ function Index() {
             </p>
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="font-display text-3xl text-accent-blue">4.9</div>
+                <div className="flex items-center gap-1.5 font-display text-3xl text-accent-blue">
+                  4.9
+                  <Star className="h-5 w-5 fill-accent-blue text-accent-blue" aria-hidden="true" />
+                  <span className="sr-only">out of 5 rating</span>
+                </div>
+
                 <div className="text-xs uppercase tracking-widest">1.2K reviews</div>
               </div>
               <div className="h-10 w-px bg-border" />
@@ -182,43 +157,56 @@ function Index() {
         </div>
       </section>
 
-      {/* Menu */}
+      {/* Menu preview */}
       <section id="menu" className="bg-white py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-6 md:px-10">
           <div className="mb-16 text-center">
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">The menu</p>
             <h2 className="mt-4 font-display text-5xl md:text-7xl">All day, every day.</h2>
             <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-              Prices in Saudi Riyal. Menu rotates with the seasons and the mood of the kitchen.
+              Prices in Saudi Riyal · VAT included.
             </p>
           </div>
 
-          <div className="grid gap-16 md:grid-cols-2 md:gap-x-16 md:gap-y-20">
-            {menu.map((sec) => (
-              <div key={sec.section}>
-                <h3 className="mb-8 flex items-baseline gap-4 font-display text-2xl">
-                  <span className="text-accent-blue">—</span>
-                  {sec.section}
-                </h3>
-                <ul className="space-y-6">
-                  {sec.items.map((it) => (
-                    <li key={it.name} className="flex items-baseline gap-4 transition-transform hover:translate-x-1">
-                      <div className="flex-1">
+          <div className="relative">
+            <div className="grid gap-12 md:grid-cols-2 md:gap-x-16">
+              {menu.slice(0, 2).map((sec) => (
+                <div key={sec.section}>
+                  <h3 className="mb-8 flex items-baseline gap-4 font-display text-2xl">
+                    <span className="text-accent-blue">—</span>
+                    {sec.section}
+                  </h3>
+                  <ul className="space-y-6">
+                    {sec.items.map((it) => (
+                      <li key={it.name} className="transition-transform hover:translate-x-1">
                         <div className="flex items-baseline gap-3">
                           <span className="font-display text-lg font-medium">{it.name}</span>
                           <span className="flex-1 border-b border-dashed border-border" />
                           <span className="font-display text-lg text-accent-blue">{it.price}</span>
                         </div>
                         <p className="mt-1 text-sm text-muted-foreground">{it.desc}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            {/* Fade + blur toward the bottom */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/85 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_35%,transparent)]" />
+
+            <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
+              <Link
+                to="/menu"
+                className="rounded-full bg-accent-blue px-7 py-3.5 text-sm font-medium text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                View full menu
+              </Link>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* Visit */}
       <section id="visit" className="relative overflow-hidden bg-accent-blue/[0.04] text-foreground">
@@ -237,44 +225,49 @@ function Index() {
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">Visit</p>
             <h2 className="mt-4 font-display text-4xl md:text-6xl">Come sit with us.</h2>
 
-            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+            <div className="mt-12 space-y-4">
               <a
                 href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:gap-8"
               >
-                <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
-                <div className="mt-2 font-display text-xl">Fanateer</div>
-                <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                <div className="sm:w-40 sm:shrink-0">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
+                  <div className="mt-1 font-display text-xl">Fanateer</div>
+                </div>
+                <div className="flex-1 text-sm leading-relaxed text-muted-foreground">
                   الشاطئ، الصناعية<br />
                   Al Shati street I, Al Jubail
                 </div>
-                <div className="mt-4 text-sm">
+                <div className="text-sm sm:text-right">
                   <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 1 AM<br />
                   <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 1 AM
+                  <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
                 </div>
-                <div className="mt-4 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
               </a>
 
               <a
                 href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
                 target="_blank"
                 rel="noreferrer"
-                className="group rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
+                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:gap-8"
               >
-                <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
-                <div className="mt-2 font-display text-xl">Al Jubail</div>
-                <div className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                <div className="sm:w-40 sm:shrink-0">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
+                  <div className="mt-1 font-display text-xl">Al Jubail</div>
+                </div>
+                <div className="flex-1 text-sm leading-relaxed text-muted-foreground">
                   King Faisal Ibn Abd Al Aziz<br />
                   King Fahd Industrial Port, Al Jubail 35518
                 </div>
-                <div className="mt-4 text-sm">
+                <div className="text-sm sm:text-right">
                   <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 12 AM<br />
                   <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 12 AM
+                  <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
                 </div>
-                <div className="mt-4 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
               </a>
+
             </div>
 
             <div className="mt-12">
