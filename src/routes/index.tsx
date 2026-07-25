@@ -81,12 +81,13 @@ function Index() {
               Josh is a small breakfast shop pouring hot coffee and stacking pancakes from 5 in the morning until 1 at night.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#menu"
+              <Link
+                to="/menu"
                 className="rounded-full bg-accent-blue px-6 py-3 text-sm font-medium text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
               >
                 See the menu
-              </a>
+              </Link>
+
               <a
                 href="#visit"
                 className="rounded-full border border-foreground/20 bg-white/60 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:text-accent-blue"
