@@ -8,6 +8,8 @@ import croissantImg from "@/assets/croissant.jpg";
 import interiorImg from "@/assets/interior.jpg";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
 import { menu } from "@/data/menu";
+import { MenuItemCard } from "@/components/MenuItemCard";
+
 
 
 export const Route = createFileRoute("/")({
@@ -79,12 +81,13 @@ function Index() {
               Josh is a small breakfast shop pouring hot coffee and stacking pancakes from 5 in the morning until 1 at night.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href="#menu"
+              <Link
+                to="/menu"
                 className="rounded-full bg-accent-blue px-6 py-3 text-sm font-medium text-white shadow-md transition hover:-translate-y-0.5 hover:shadow-lg"
               >
                 See the menu
-              </a>
+              </Link>
+
               <a
                 href="#visit"
                 className="rounded-full border border-foreground/20 bg-white/60 px-6 py-3 text-sm font-medium text-foreground backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:text-accent-blue"
@@ -169,28 +172,22 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="grid gap-12 md:grid-cols-2 md:gap-x-16">
+            <div className="grid gap-10 md:grid-cols-2 md:gap-x-12">
               {menu.slice(0, 2).map((sec) => (
                 <div key={sec.section}>
-                  <h3 className="mb-8 flex items-baseline gap-4 font-display text-2xl">
+                  <h3 className="mb-6 flex items-baseline gap-4 font-display text-2xl">
                     <span className="text-accent-blue">—</span>
                     {sec.section}
                   </h3>
-                  <ul className="space-y-6">
+                  <div className="grid gap-4">
                     {sec.items.map((it) => (
-                      <li key={it.name} className="transition-transform hover:translate-x-1">
-                        <div className="flex items-baseline gap-3">
-                          <span className="font-display text-lg font-medium">{it.name}</span>
-                          <span className="flex-1 border-b border-dashed border-border" />
-                          <span className="font-display text-lg text-accent-blue">{it.price}</span>
-                        </div>
-                        <p className="mt-1 text-sm text-muted-foreground">{it.desc}</p>
-                      </li>
+                      <MenuItemCard key={it.name} item={it} />
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
+
 
             {/* Fade + blur toward the bottom */}
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/85 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_35%,transparent)]" />

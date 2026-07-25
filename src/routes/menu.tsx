@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { menu } from "@/data/menu";
 import joshLogo from "@/assets/josh-logo.webp.asset.json";
+import { MenuItemCard } from "@/components/MenuItemCard";
+
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -49,12 +51,13 @@ function MenuPage() {
               </Link>
             </li>
           </ul>
-          <a
-            href="tel:+966598678697"
+          <Link
+            to="/"
             className="rounded-full bg-accent-blue px-4 py-2 text-xs font-medium uppercase tracking-widest text-white shadow-sm transition hover:opacity-90 hover:shadow-md"
           >
-            Call
-          </a>
+            ← Home
+          </Link>
+
         </nav>
       </header>
 
@@ -78,32 +81,12 @@ function MenuPage() {
               <span className="text-accent-blue">—</span>
               {sec.section}
             </h2>
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {sec.items.map((it) => (
-                <article
-                  key={it.name}
-                  className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-accent-blue/40 hover:shadow-lg"
-                >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={it.img}
-                      alt={it.name}
-                      loading="lazy"
-                      className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-                  </div>
-                  <div className="p-5">
-                    <div className="flex items-baseline justify-between gap-3">
-                      <h3 className="font-display text-lg font-medium">{it.name}</h3>
-                      <span className="whitespace-nowrap font-display text-lg text-accent-blue">
-                        SAR {it.price}
-                      </span>
-                    </div>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{it.desc}</p>
-                  </div>
-                </article>
+                <MenuItemCard key={it.name} item={it} />
               ))}
             </div>
+
           </div>
         </section>
       ))}
