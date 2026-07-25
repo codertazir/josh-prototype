@@ -117,7 +117,12 @@ function Index() {
             </p>
             <div className="flex items-center gap-6 pt-4">
               <div>
-                <div className="font-display text-3xl text-accent-blue">4.9</div>
+                <div className="flex items-center gap-1.5 font-display text-3xl text-accent-blue">
+                  4.9
+                  <Star className="h-5 w-5 fill-accent-blue text-accent-blue" aria-hidden="true" />
+                  <span className="sr-only">out of 5 rating</span>
+                </div>
+
                 <div className="text-xs uppercase tracking-widest">1.2K reviews</div>
               </div>
               <div className="h-10 w-px bg-border" />
