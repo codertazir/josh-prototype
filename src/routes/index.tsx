@@ -44,7 +44,7 @@ function Index() {
           </a>
           <ul className="hidden gap-8 text-sm text-foreground/80 md:flex">
             <li><a href="#story" className="transition-colors hover:text-accent-blue">Story</a></li>
-            <li><a href="#menu" className="transition-colors hover:text-accent-blue">Menu</a></li>
+            <li><Link to="/menu" className="transition-colors hover:text-accent-blue">Menu</Link></li>
             <li><a href="#visit" className="transition-colors hover:text-accent-blue">Visit</a></li>
           </ul>
           <a
