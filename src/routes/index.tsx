@@ -31,40 +31,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const menu = [
-  {
-    section: "Pancakes & Sweet",
-    items: [
-      { name: "Classic Buttermilk Stack", desc: "Fluffy pancakes, butter, warm maple syrup.", price: "24" },
-      { name: "Lotus Dream", desc: "Pancakes drenched in Lotus caramel and crushed biscuit.", price: "31" },
-      { name: "Berry Cloud", desc: "Fresh berries, mascarpone, powdered sugar.", price: "29" },
-    ],
-  },
-  {
-    section: "Omelettes & Eggs",
-    items: [
-      { name: "Cheesy Omelette", desc: "Three-cheese pull, herbs, sourdough toast.", price: "29" },
-      { name: "Shakshuka Fanateer", desc: "Eggs poached in spiced tomato, feta, bread.", price: "27" },
-      { name: "Dynamite Chicken", desc: "Crispy chicken, eggs, spicy Josh sauce.", price: "31" },
-    ],
-  },
-  {
-    section: "Loaf, Buns & Burgers",
-    items: [
-      { name: "Golden Bun", desc: "Toasted brioche, cream cheese, honey drizzle.", price: "19" },
-      { name: "Chicken Burger", desc: "Buttermilk fried chicken, pickles, brioche.", price: "17" },
-      { name: "Le Croissant", desc: "Butter croissant, choice of jam or Nutella.", price: "15" },
-    ],
-  },
-  {
-    section: "From the Bar",
-    items: [
-      { name: "Spanish Latte", desc: "Espresso, steamed milk, condensed sweetness.", price: "16" },
-      { name: "V60 Pour Over", desc: "Rotating single origin, bright and clean.", price: "18" },
-      { name: "Karak", desc: "Spiced milk tea, brewed slow.", price: "10" },
-    ],
-  },
-];
+
 
 function Index() {
   return (
