@@ -15,16 +15,16 @@ import { MenuItemCard } from "@/components/MenuItemCard";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Josh — The Breakfast Shop | Al Jubail" },
+      { title: "Josh — The Breakfast Shop" },
       {
         name: "description",
         content:
-          "Josh (جوش الفناتير) — a beloved breakfast shop in Al Jubail serving fluffy pancakes, cheesy omelettes, golden croissants and coffee from 5AM to 1AM.",
+          "Josh is a small breakfast shop pouring hot coffee and stacking pancakes from 5 in the morning until 1 at night.",
       },
       { property: "og:title", content: "Josh — The Breakfast Shop" },
       {
         property: "og:description",
-        content: "Fluffy pancakes, cheesy omelettes, golden croissants. Al Shati Street, Al Jubail.",
+        content: "A small breakfast shop serving from 5 in the morning until 1 at night.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
