@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "e6b82c7d-5f38-4115-b140-832738de50e3",
-  "project_id": "45368132-267c-4efe-ae71-695375ccc6db",
-  "url": "/__l5e/assets-v1/e6b82c7d-5f38-4115-b140-832738de50e3/josh-logo.webp",
-  "r2_key": "a/v1/45368132-267c-4efe-ae71-695375ccc6db/e6b82c7d-5f38-4115-b140-832738de50e3/josh-logo.webp",
-  "original_filename": "josh-logo.webp",
-  "size": 21684,
   "content_type": "image/webp",
-  "created_at": "2026-07-24T11:55:04Z"
+  "created_at": "2026-07-24T11:55:04Z",
+  "original_filename": "josh-logo.webp",
+  "project_id": "c281b29d-1c4c-4841-be2f-d27c72330666",
+  "r2_key": "a/v1/c281b29d-1c4c-4841-be2f-d27c72330666/e6b82c7d-5f38-4115-b140-832738de50e3/josh-logo.webp",
+  "size": 21684,
+  "url": "/__l5e/assets-v1/e6b82c7d-5f38-4115-b140-832738de50e3/josh-logo.webp",
+  "version": 1
 }
