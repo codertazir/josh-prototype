@@ -173,14 +173,14 @@ function Index() {
 
           <div className="relative">
             <div className="grid gap-10 md:grid-cols-2 md:gap-x-12">
-              {menu.slice(0, 2).map((sec) => (
-                <div key={sec.section}>
+              {menu.slice(0, 2).map((sec, i) => (
+                <div key={sec.section} className={i === 1 ? "hidden md:block" : undefined}>
                   <h3 className="mb-6 flex items-baseline gap-4 font-display text-2xl">
                     <span className="text-accent-blue">—</span>
                     {sec.section}
                   </h3>
                   <div className="grid gap-4">
-                    {sec.items.map((it) => (
+                    {sec.items.slice(0, 3).map((it) => (
                       <MenuItemCard key={it.name} item={it} />
                     ))}
                   </div>
@@ -190,7 +190,7 @@ function Index() {
 
 
             {/* Fade + blur toward the bottom */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/85 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_35%,transparent)]" />
+            <div className="pointer-events-none absolute inset-x-0 -bottom-2 h-64 bg-gradient-to-t from-white via-white to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
               <Link
