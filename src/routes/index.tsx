@@ -239,7 +239,7 @@ function Index() {
 
             <div className="mt-12 space-y-4">
               <a
-                href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
+                href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
@@ -260,7 +260,7 @@ function Index() {
               </a>
 
               <a
-                href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
+                href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
