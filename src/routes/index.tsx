@@ -173,14 +173,14 @@ function Index() {
 
           <div className="relative">
             <div className="grid gap-10 md:grid-cols-2 md:gap-x-12">
-              {menu.slice(0, 2).map((sec) => (
-                <div key={sec.section}>
+              {menu.slice(0, 2).map((sec, i) => (
+                <div key={sec.section} className={i === 1 ? "hidden md:block" : undefined}>
                   <h3 className="mb-6 flex items-baseline gap-4 font-display text-2xl">
                     <span className="text-accent-blue">—</span>
                     {sec.section}
                   </h3>
                   <div className="grid gap-4">
-                    {sec.items.map((it) => (
+                    {sec.items.slice(0, 3).map((it) => (
                       <MenuItemCard key={it.name} item={it} />
                     ))}
                   </div>
@@ -190,7 +190,7 @@ function Index() {
 
 
             {/* Fade + blur toward the bottom */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/85 to-transparent backdrop-blur-[3px] [mask-image:linear-gradient(to_top,black_35%,transparent)]" />
+            <div className="pointer-events-none absolute inset-x-0 -bottom-2 h-64 bg-gradient-to-t from-white via-white to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
               <Link
@@ -227,17 +227,17 @@ function Index() {
                 href="https://maps.app.goo.gl/3Vj6hkuSCpLqwnmC7"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:gap-8"
+                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
               >
-                <div className="sm:w-40 sm:shrink-0">
+                <div>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 01</div>
                   <div className="mt-1 font-display text-xl">Fanateer</div>
                 </div>
-                <div className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                <div className="text-sm leading-relaxed text-muted-foreground">
                   الشاطئ، الصناعية<br />
                   Al Shati street I, Al Jubail
                 </div>
-                <div className="text-sm sm:text-right">
+                <div className="text-sm">
                   <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 1 AM<br />
                   <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 1 AM
                   <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
@@ -248,17 +248,17 @@ function Index() {
                 href="https://maps.app.goo.gl/eZPiN17cMnyimEjZ8"
                 target="_blank"
                 rel="noreferrer"
-                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:gap-8"
+                className="group flex flex-col gap-4 rounded-2xl border border-border bg-white/70 p-6 backdrop-blur transition hover:-translate-y-0.5 hover:border-accent-blue hover:shadow-md"
               >
-                <div className="sm:w-40 sm:shrink-0">
+                <div>
                   <div className="text-[10px] uppercase tracking-[0.3em] text-accent-blue">Branch 02</div>
                   <div className="mt-1 font-display text-xl">Al Jubail</div>
                 </div>
-                <div className="flex-1 text-sm leading-relaxed text-muted-foreground">
+                <div className="text-sm leading-relaxed text-muted-foreground">
                   King Faisal Ibn Abd Al Aziz<br />
                   King Fahd Industrial Port, Al Jubail 35518
                 </div>
-                <div className="text-sm sm:text-right">
+                <div className="text-sm">
                   <span className="text-muted-foreground">Sun – Thu</span> <span className="mx-1 text-accent-blue">•</span> 5 AM – 12 AM<br />
                   <span className="text-muted-foreground">Fri – Sat</span> <span className="mx-1 text-accent-blue">•</span> 6 AM – 12 AM
                   <div className="mt-2 text-xs text-muted-foreground group-hover:text-accent-blue">Open in Maps →</div>
