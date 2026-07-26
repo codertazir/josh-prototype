@@ -171,7 +171,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <div className="grid gap-10 md:grid-cols-2 md:gap-x-12">
               {menu.slice(0, 2).map((sec, i) => (
                 <div key={sec.section} className={i === 1 ? "hidden md:block" : undefined}>
@@ -188,11 +188,10 @@ function Index() {
               ))}
             </div>
 
+            {/* Blur mask toward the bottom — hides last-row shadows too */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/70 to-transparent backdrop-blur-[2px]" />
 
-            {/* Fade + blur toward the bottom */}
-            <div className="pointer-events-none absolute inset-x-0 -bottom-2 h-64 bg-gradient-to-t from-white via-white to-transparent" />
-
-            <div className="absolute inset-x-0 bottom-0 flex justify-center pb-2">
+            <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4">
               <Link
                 to="/menu"
                 className="rounded-full bg-accent-blue px-7 py-3.5 text-sm font-medium text-white shadow-lg transition hover:-translate-y-0.5 hover:shadow-xl"
