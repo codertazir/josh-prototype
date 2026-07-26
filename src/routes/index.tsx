@@ -189,7 +189,7 @@ function Index() {
             </div>
 
             {/* Blur mask toward the bottom — hides last-row shadows too */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/70 to-transparent backdrop-blur-[2px]" />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-white via-white/60 to-transparent backdrop-blur-md" />
 
             <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4">
               <Link
