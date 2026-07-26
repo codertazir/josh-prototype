@@ -188,8 +188,24 @@ function Index() {
               ))}
             </div>
 
-            {/* Blur mask toward the bottom — hides last-row shadows too */}
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/70 to-transparent backdrop-blur-[2px]" />
+            {/* Smooth gradient blur mask toward the bottom */}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-56">
+              {/* White fade for readability */}
+              <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-white via-white/75 to-transparent" />
+              {/* Graduated blur layers */}
+              <div
+                className="absolute inset-x-0 bottom-0 h-56 backdrop-blur-[1px]"
+                style={{ maskImage: "linear-gradient(to top, black 0%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, black 0%, transparent 100%)" }}
+              />
+              <div
+                className="absolute inset-x-0 bottom-0 h-56 backdrop-blur-[3px]"
+                style={{ maskImage: "linear-gradient(to top, black 0%, black 30%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, black 0%, black 30%, transparent 100%)" }}
+              />
+              <div
+                className="absolute inset-x-0 bottom-0 h-56 backdrop-blur-[8px]"
+                style={{ maskImage: "linear-gradient(to top, black 0%, black 60%, transparent 100%)", WebkitMaskImage: "linear-gradient(to top, black 0%, black 60%, transparent 100%)" }}
+              />
+            </div>
 
             <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4">
               <Link
