@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { menu } from "@/data/menu";
+import joshLogo from "@/assets/josh-logo.webp";
 import { MenuItemCard } from "@/components/MenuItemCard";
 
 
@@ -31,7 +32,7 @@ function MenuPage() {
       <header className="fixed top-4 left-1/2 z-50 w-[min(96%,1120px)] -translate-x-1/2 animate-fade-in">
         <nav className="flex items-center justify-between rounded-full border border-white/40 bg-white/70 px-4 py-2.5 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.15)] backdrop-blur-xl md:px-6 md:py-3">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/josh-logo.webp" alt="Josh" className="h-8 w-auto rounded-lg md:h-9" />
+            <img src={joshLogo} alt="Josh" className="h-8 w-auto rounded-lg md:h-9" />
           </Link>
           <ul className="hidden gap-8 text-sm text-foreground/80 md:flex">
             <li>
@@ -92,7 +93,7 @@ function MenuPage() {
 
       <footer className="bg-white pb-10 pt-4 text-muted-foreground">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 border-t border-border px-6 pt-8 text-xs md:px-10">
-          <img src="/josh-logo.webp" alt="Josh" className="h-16 w-auto md:h-20" />
+          <img src={joshLogo} alt="Josh" className="h-16 w-auto md:h-20" />
           <Link to="/" className="hover:text-accent-blue">
             ← Back home
           </Link>
