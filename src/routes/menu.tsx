@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { menu } from "@/data/menu";
-import joshLogo from "@/assets/josh-logo.webp.asset.json";
+import joshLogo from "@/assets/josh-logo.webp";
 import { MenuItemCard } from "@/components/MenuItemCard";
 
 
