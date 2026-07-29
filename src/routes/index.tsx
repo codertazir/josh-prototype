@@ -105,13 +105,12 @@ function Index() {
           <div className="md:col-span-5">
             <p className="text-xs uppercase tracking-[0.35em] text-accent-blue">Our story</p>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
-              A neighborhood table on Al Shati Street.
+              Delicious food, done right.
             </h2>
           </div>
           <div className="space-y-6 text-base leading-relaxed text-muted-foreground md:col-span-6 md:col-start-7 md:text-lg">
             <p>
-              Josh is a neighborhood breakfast shop on Al Shati Street in Fanateer, built around
-              one simple idea — make the first meal of the day worth waking up for.
+              Josh is a breakfast shop in Al Jubail, built around one simple idea — make the first meal of the day worth waking up for.
             </p>
             <p>
               Everything is made to order. Pancakes hit the pan when you sit down. Omelettes are folded
